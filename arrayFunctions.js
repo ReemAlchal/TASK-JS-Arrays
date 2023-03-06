@@ -9,9 +9,15 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  // Your code here
+  let numLenght= numbers.length
+  if (numLenght%2 === 1){
+    return true 
+  }
+  else {
+    return false 
+  }
 }
-
+console.log(isArrayLengthOdd([1,2,3,4,5]))
 /**
  * isArrayLengthEven(numbers):
  * - receives array `numbers`
@@ -23,8 +29,17 @@ function isArrayLengthOdd(numbers) {
  * isArrayLengthEven([1, 2, 3, 4]) -> true
  */
 function isArrayLengthEven(numbers) {
-  // Your code here
+  let numLenght= numbers.length
+  if (numLenght%2 === 0){
+    return true 
+  }
+  else {
+    return false 
+  }
 }
+console.log(isArrayLengthEven([1,2,3,4,5]))
+
+
 
 /**
  * addLailaToArray(instructors):
@@ -35,9 +50,10 @@ function isArrayLengthEven(numbers) {
  * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors) {
-  // Your code here
+  instructors.push("Laila")
+  return instructors 
 }
-
+console.log(addLailaToArray(["nasir","emad","Sara"]))
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -47,9 +63,9 @@ function addLailaToArray(instructors) {
  * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
  */
 function eliminateTeam(teams) {
-  // Your code here
+ return teams.pop()
 }
-
+console.log(eliminateTeam(["Brazil", "Germany", "Italy"]))
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
  * - receives array `fruits`
@@ -61,9 +77,16 @@ function eliminateTeam(teams) {
  * secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "blueberry"]) -> []
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
-  // Your code here
+  let fruitsLenght= fruits.length
+  if (fruitsLenght%2 ===1){
+    return []
+  }
+  else {
+    let halfArray =fruitsLenght/2
+    return fruits.slice(halfArray,fruitsLenght)
+  }
 }
-
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]))
 /**
  * youGottaCalmDown(shout):
  * - receives a string `shout`
@@ -79,8 +102,10 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .slice()
  */
 function youGottaCalmDown(shout) {
-  // Your code here
+  return shout.slice(0,shout.indexOf("!")+1)
 }
+
+console.log(youGottaCalmDown("nhfnhhngh!!!!!!!!!!"))
 
 module.exports = {
   isArrayLengthOdd,
